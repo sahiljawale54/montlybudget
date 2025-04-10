@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monthly Salary Tracker</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Monthly Salary Tracker</h1>
+
+      <form id="entryForm">
+        <input
+          type="text"
+          id="description"
+          placeholder="Description"
+          required
+        />
+        <input type="number" id="amount" placeholder="Amount" required />
+
+        <div
+          style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap"
+        >
+          <label>
+            <input type="radio" name="type" value="income" checked />
+            Income
+          </label>
+          <label>
+            <input type="radio" name="type" value="expense" />
+            Expense
+          </label>
+        </div>
+
+        <button type="submit">Add Entry</button>
+      </form>
+
+      <div class="summary" id="summary">Total Balance: ₹0</div>
+
+      <div class="card-container" id="entryCards"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
